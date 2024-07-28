@@ -1,5 +1,6 @@
 {
-  "name": "react-starter",
+  "name": "sipkovana",
+  "homepage": "https://donkeydushan.github.io/sipkovana/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +9,7 @@
     "build": "tsc && vite build",
     "format": "prettier --write \"src/**/*.[jt]s{,x}\"",
     "lint": "tsc --noEmit && eslint \"src/**/*.[jt]s{,x}\"",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
