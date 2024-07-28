@@ -18,9 +18,13 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
   const [showHint, setShowHint] = useState(false);
 
   useEffect(() => {
-    if (!correct) setAnswer('');
+    if (!correct) {
+      setAnswer('');
+      setCorrect(undefined);
+    }
     setShowHint(false);
-  }, [open, correct]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   const handleCheck = () => {
     setCorrect(answer === riddle.answer);
@@ -59,10 +63,24 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
           if (e.code === 'Enter') handleCheck();
         }}
       />
-      {showHint && <Box className={styles.instructions}>{riddle.hint}</Box>}
+      {showHint && <Box className={styles.instructions}>{`"${riddle.hint}"`}</Box>}
+      {correct === false && (
+        <Box className={styles.instructions}>
+          {'To není odpověď, kterou chceme slyšet. Zkus to znovu :)'}
+        </Box>
+      )}
       {!correct && (
         <Box className={styles.buttonsWrapper}>
-          {!showHint && <Button onClick={() => setShowHint(true)}>Chci nápovědu</Button>}
+          {!showHint && (
+            <Button
+              onClick={() => {
+                setShowHint(true);
+                setCorrect(undefined);
+              }}
+            >
+              Chci nápovědu
+            </Button>
+          )}
           <Button onClick={handleCheck} sx={{ gridColumn: 2 }}>
             Potvrdit odpověď
           </Button>
@@ -82,11 +100,6 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
               <CopyIcon />
             </IconButton>
           )}
-        </Box>
-      )}
-      {correct === false && (
-        <Box className={styles.instructions}>
-          {'To není odpověď, kterou chceme slyšet. Zkus to znovu :)'}
         </Box>
       )}
     </Dialog>
