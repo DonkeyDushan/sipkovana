@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Dialog, IconButton, TextField } from '@mui/material';
 import styles from './index.module.scss';
-import { CopyIcon } from '../CopyIcon';
+import { CopyIcon } from '../icons/CopyIcon';
 import { RiddleType } from 'app/utils/types';
+import { CloseIcon } from '../icons/CloseIcon';
 
 export interface DialogProps {
   open: boolean;
@@ -37,6 +38,17 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className={styles.dialog}>
+      <IconButton
+        aria-label="close"
+        onClick={() => setOpen(false)}
+        sx={{
+          position: 'absolute',
+          right: 8,
+          top: -48,
+        }}
+      >
+        <CloseIcon />
+      </IconButton>
       {correct && riddle.question}
       <TextField
         className={styles.textField}
@@ -52,13 +64,12 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
         <Box className={styles.buttonsWrapper}>
           {!showHint && <Button onClick={() => setShowHint(true)}>Chci nápovědu</Button>}
           <Button onClick={handleCheck} sx={{ gridColumn: 2 }}>
-            {' '}
-            Potvrdit odpověď{' '}
+            Potvrdit odpověď
           </Button>
         </Box>
       )}
       {correct && (
-        <Box className={styles.instructions}>
+        <Box className={styles.instructions} sx={{ fontWeight: 600 }}>
           {riddle.location}
           {riddle.location.includes('N,') && (
             <IconButton
@@ -73,7 +84,11 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
           )}
         </Box>
       )}
-      {correct === false && <Box>{'To není odpověď, kterou chceme slyšet. Zkus to znovu :)'}</Box>}
+      {correct === false && (
+        <Box className={styles.instructions}>
+          {'To není odpověď, kterou chceme slyšet. Zkus to znovu :)'}
+        </Box>
+      )}
     </Dialog>
   );
 };

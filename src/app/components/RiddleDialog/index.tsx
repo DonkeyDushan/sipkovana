@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import { RiddleType } from 'app/utils/types';
 import styles from './index.module.scss';
 import { colors } from 'app/utils/colors';
-import { CheckIcon } from '../CheckIcon';
+import { CheckIcon } from '../icons/CheckIcon';
 import { DialogContent } from '../DialogContent';
 
 export const RiddleDialog = ({ riddle }: { riddle: RiddleType }) => {

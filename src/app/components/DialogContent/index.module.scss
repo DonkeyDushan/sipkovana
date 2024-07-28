@@ -1,6 +1,7 @@
 
 .dialog {
     > div > div {
+        overflow: visible;
         width: 80vw;
         max-width: 420px;
         padding: 24px;
@@ -22,7 +23,6 @@
 }
 
 .instructions {
-    font-weight: 600;
     text-align: center;
     display: flex;
     flex-flow: row;
