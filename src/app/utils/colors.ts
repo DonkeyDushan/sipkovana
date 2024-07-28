@@ -6,5 +6,5 @@ export const colors: ColorsType = {
   blue: '#a4c2f4',
   purple: '#c0b3e5',
   green: '#b5e3c1',
-  white: '#fff',
+  white: '#ffffff',
 };
