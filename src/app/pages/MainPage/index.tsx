@@ -1,13 +1,17 @@
 import React from 'react';
-import { Grid } from '@mui/material';
-import { StarterButton } from 'app/components';
+import { Box } from '@mui/material';
 import styles from './index.module.css';
+import { riddles } from 'app/utils/riddles';
+import { RiddleDialog } from 'app/components/RiddleDialog';
 
 export const MainPage = () => {
   return (
-    <Grid container className={styles.starterWrapper}>
-      React starter
-      <StarterButton />
-    </Grid>
+    <Box className={styles.root}>
+      <Box className={styles.grid}>
+        {riddles.map((riddle) => (
+          <RiddleDialog key={riddle.color} riddle={riddle} />
+        ))}
+      </Box>
+    </Box>
   );
 };

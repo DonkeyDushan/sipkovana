@@ -1,7 +1,14 @@
-.starterWrapper {
-    justify-content:center;
+.root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    height: 90vh;
-    flex-direction: column;
-    gap: 16px;
+    background-color: #241b2f;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
