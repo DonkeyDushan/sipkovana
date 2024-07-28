@@ -1,10 +1,10 @@
 import { ColorsType } from './types';
 
 export const colors: ColorsType = {
-  pink: '#d5a6bd',
-  yellow: '#ffe59a',
-  blue: '#a4c2f4',
-  purple: '#c0b3e5',
-  green: '#b5e3c1',
+  pink: '#faa5a8',
+  yellow: '#ece29b',
+  green: '#b5d19d',
+  blue: '#90d1d8',
+  purple: '#d3a1bd',
   white: '#ffffff',
 };
