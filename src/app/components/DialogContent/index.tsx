@@ -63,7 +63,7 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
           if (e.code === 'Enter') handleCheck();
         }}
       />
-      {showHint && <Box className={styles.instructions}>{`"${riddle.hint}"`}</Box>}
+      {showHint && <Box className={styles.instructions}>{`${riddle.hint}`}</Box>}
       {correct === false && (
         <Box className={styles.instructions}>
           {'To není odpověď, kterou chceme slyšet. Zkus to znovu :)'}
