@@ -2,6 +2,37 @@ import { RiddleType } from './types';
 
 export const riddles: RiddleType[] = [
   {
+    color: 'blue',
+    question: 'Napište název jednoho ze sedmi divů světa, kdysi strážícího řecký přístav.',
+    answer: ['KOLOS RHODSKÝ', 'RHODSKÝ KOLOS', 'KOLOS'],
+    hint: 'Rh',
+    location: '',
+  },
+  {
+    color: 'yellow',
+    question: 'Jmenujte oblíbenou pochoutku nejsilnějšího Gala.',
+    answer: ['KANEC', 'DIVOKÉ PRASE', 'PRASE DIVOKÉ'],
+    hint: 'Bivoj',
+    location: '',
+  },
+  {
+    color: 'aqua',
+    question: 'Brodivý pták, který získal prestižní ocenění Pták roku 1994 i 2014',
+    answer: ['ČÁP BÍLÝ'],
+    hint: 'Nemá pokrývku hlavy',
+    location: '',
+  },
+  {
+    color: 'orange',
+    question: 'Oblíbená pochoutka člověka zručného, vzpřímeného i rozumného.',
+    answer: ['Morek'],
+    hint: 'Nápovědu naleznete na xxxx',
+    location: '',
+  },
+];
+
+/* export const riddles: RiddleType[] = [
+  {
     color: 'white',
     question: 'Když si mě sbalíš na výlet, bude tvůj batůžek lehčí.',
     answer: 'DOBRÁ NÁLADA',
@@ -44,7 +75,7 @@ export const riddles: RiddleType[] = [
     hint: 'Fibonacci',
     location: 'Zlatá střední cesta.',
   },
-];
+]; */
 
 /* "Během vaší cesty dostanete 6 obálek s úkoly. Toto je první z nich. "
 "Běžte na donkeydushan.github.io/sipkovana, zvolte příslušnou barvu obálky a odpovězte. Vaší odměnou za spávnou odpověď bude informace, kudy jít dál."

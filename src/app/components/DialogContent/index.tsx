@@ -27,11 +27,11 @@ export const DialogContent = ({ open, setOpen, correct, setCorrect, riddle }: Di
   }, [open]);
 
   const handleCheck = () => {
-    setCorrect(answer === riddle.answer);
-    if (answer === riddle.answer) {
+    setCorrect(riddle.answer.includes(answer));
+    if (riddle.answer.includes(answer)) {
       setShowHint(false);
     }
-    if (answer !== riddle.answer) {
+    if (!riddle.answer.includes(answer)) {
       setAnswer('');
     }
   };
