@@ -2,32 +2,62 @@ import { RiddleType } from './types';
 
 export const riddles: RiddleType[] = [
   {
-    color: 'blue',
-    question: 'Napište název jednoho ze sedmi divů světa, kdysi strážícího řecký přístav.',
-    answer: ['KOLOS RHODSKÝ', 'RHODSKÝ KOLOS', 'KOLOS'],
-    hint: 'Rh',
-    location: '',
-  },
-  {
     color: 'yellow',
     question: 'Jmenujte oblíbenou pochoutku nejsilnějšího Gala.',
     answer: ['KANEC', 'DIVOKÉ PRASE', 'PRASE DIVOKÉ'],
     hint: 'Bivoj',
-    location: '',
+    location: 'Běžte na cestu nad krmelcem a pokračujte doleva',
+    number: 'I',
+  },
+  {
+    color: 'yellow',
+    question:
+      'Jsem fiktivní postava a právě jste prošli kolem příbytku mého největšího obdivovatele.',
+    answer: ['BERUŠKA'],
+    hint: 'Mám 7 teček',
+    location: 'Doleva',
+    number: 'II',
+  },
+  {
+    color: 'blue',
+    question: 'Napište název jednoho ze sedmi divů světa, kdysi strážícího řecký přístav.',
+    answer: ['KOLOS RHODSKÝ', 'RHODSKÝ KOLOS', 'KOLOS'],
+    hint: 'Rh',
+    location:
+      'Napněte plachty a plujte na jihozápad k dalšímu přístavu, kde kotví podobná plachetnice',
+    number: 'I',
+  },
+  {
+    color: 'blue',
+    question: 'Poznejte strom',
+    answer: ['JEŘÁB', 'JEŘÁB PTAČÍ'],
+    hint: 'Stejně se nazývá i druh ptáka.',
+    location: 'Pokračujte doprava po červené turistické dokud fáborky neřeknou jinak.',
+    number: 'II',
   },
   {
     color: 'aqua',
     question: 'Brodivý pták, který získal prestižní ocenění Pták roku 1994 i 2014',
     answer: ['ČÁP BÍLÝ'],
     hint: 'Nemá pokrývku hlavy',
-    location: '',
+    location: 'Vraťte se na červenou a pokračujte po ní.',
+    number: 'I',
   },
   {
     color: 'orange',
+    question: 'Jméno partnera makové panenky',
+    answer: ['EMANUEL', 'MOTÝL EMANUEL'],
+    hint: 'Včera jste s ním létali.',
+    location: 'V dálce pod vedením najděte padlý strom. Jdete k němu',
+    number: 'I',
+  },
+  {
+    color: 'aqua',
     question: 'Oblíbená pochoutka člověka zručného, vzpřímeného i rozumného.',
-    answer: ['Morek'],
-    hint: 'Nápovědu naleznete na xxxx',
-    location: '',
+    answer: ['MOREK'],
+    hint: 'Můžete se stát dárcem',
+    location: 'Pokračujte podél řepkového pole posekanou loukou.',
+    number: 'II ',
   },
 ];
 

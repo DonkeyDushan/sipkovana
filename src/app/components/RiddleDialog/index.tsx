@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { RiddleType } from 'app/utils/types';
 import styles from './index.module.scss';
 import { colors } from 'app/utils/colors';
@@ -24,7 +24,7 @@ export const RiddleDialog = ({ riddle }: { riddle: RiddleType }) => {
         }}
         onClick={() => setOpen(true)}
       >
-        {correct && <CheckIcon />}
+        {correct ? <CheckIcon /> : <Typography color="#252335">{riddle.number}</Typography>}
       </Button>
       <DialogContent
         open={open}

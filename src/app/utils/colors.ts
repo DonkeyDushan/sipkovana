@@ -7,8 +7,8 @@ export const colors: ColorsType = {
   blue: '#4b47adff',
   purple: '#d3a1bd',
   white: '#ffffff', */
-  yellow: '#fff313ff',
+  yellow: '#fff313',
   orange: '#ff800a',
-  aqua: '#64edffff',
-  blue: '#3370fcff',
+  aqua: '#64edff',
+  blue: '#3370fc',
 };

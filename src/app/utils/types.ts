@@ -4,6 +4,7 @@ export interface RiddleType {
   answer: string[];
   hint: string;
   location: string;
+  number?: string;
 }
 
 export interface ColorsType {
