@@ -24,7 +24,7 @@ export const RiddleDialog = ({ riddle }: { riddle: RiddleType }) => {
         }}
         onClick={() => setOpen(true)}
       >
-        {correct ? <CheckIcon /> : <Typography color="#252335">{riddle.number}</Typography>}
+        {correct ? <CheckIcon /> : <Typography color="#fff">{riddle.number}</Typography>}
       </Button>
       <DialogContent
         open={open}

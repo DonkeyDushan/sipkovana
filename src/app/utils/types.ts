@@ -8,10 +8,11 @@ export interface RiddleType {
 }
 
 export interface ColorsType {
-  yellow: string;
-  orange: string;
-  aqua: string;
-  blue: string;
+  red: string;
+  cobalt: string;
+  greenLight: string;
+  green: string;
+  turquoise: string;
   /*   pink: string;
   yellow: string;
   blue: string;
